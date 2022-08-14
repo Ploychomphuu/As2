@@ -2,7 +2,7 @@ import 'dart:math';
 
 class Game {
   int ans = 0;
-  var List = <int>[];
+  var myList = <int>[];
 
   Game([int maxRandom = 100]) {
    Random r = Random();
@@ -15,25 +15,26 @@ class Game {
       print("➜ $num is TOO HIGH!!");
       print("──────────────────────────────────────────────");
       count++;
-      List.add(num);
+      myList.add(num);
       return 0;
     } else if (num < ans) {
       print("➜ $num is TOO LOW!!");
       print("──────────────────────────────────────────────");
       count++;
-      List.add(num);
+      myList.add(num);
       return 0;
     } else {
       print("➜ $num is CORRECT ❤, total guesses: $count");
       count = 1;
-      List.add(num);
+      myList.add(num);
       return 1;
     }
   }
   void length(){
-    print("${List.length} in a row");
+    var len = myList.length;
+    print("$len in a row");
   }
-}//
+}
 
 
 
